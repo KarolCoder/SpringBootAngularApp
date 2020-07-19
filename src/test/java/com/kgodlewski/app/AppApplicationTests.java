@@ -2,13 +2,11 @@ package com.kgodlewski.app;
 
 import com.kgodlewski.app.entities.Customer;
 import com.kgodlewski.app.entities.Student;
-import com.kgodlewski.app.repositories.CustomerRepository;
-import com.kgodlewski.app.repositories.StudentRepository;
+import com.kgodlewski.app.repository.CustomerRepository;
+import com.kgodlewski.app.repository.StudentRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.Optional;
 
 @SpringBootTest
 class AppApplicationTests {

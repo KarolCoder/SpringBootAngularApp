@@ -1,4 +1,4 @@
-package com.kgodlewski.app.repositories;
+package com.kgodlewski.app.repository;
 
 import com.kgodlewski.app.entities.Customer;
 import org.springframework.data.repository.CrudRepository;
