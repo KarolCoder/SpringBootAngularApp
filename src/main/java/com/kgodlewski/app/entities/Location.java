@@ -9,7 +9,6 @@ import javax.persistence.Id;
 public class Location {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String code;
     private String name;
