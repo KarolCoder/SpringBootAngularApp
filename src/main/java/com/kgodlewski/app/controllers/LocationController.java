@@ -1,8 +1,10 @@
 package com.kgodlewski.app.controllers;
 
 import com.kgodlewski.app.entities.Location;
+import com.kgodlewski.app.repository.LocationRepository;
 import com.kgodlewski.app.service.LocationService;
 import com.kgodlewski.app.util.EmailUtil;
+import com.kgodlewski.app.util.ReportUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 @Controller
@@ -19,7 +22,16 @@ public class LocationController {
     LocationService service;
 
     @Autowired
+    LocationRepository repository;
+
+    @Autowired
     EmailUtil emailUtil;
+
+    @Autowired
+    ReportUtil reportUtil;
+
+    @Autowired
+    ServletContext servletContext;
 
     @RequestMapping("/showCreate")
     public String showCreate() {
@@ -67,6 +79,13 @@ public class LocationController {
         List<Location> allLocations = service.getAllLocations();
         modelMap.addAttribute("allLocations", allLocations);
         return "displayLocations";
+    }
+    @RequestMapping("/generateReport")
+    public String generateReport(){
+        List<Object[]> data = repository.findTypeAndTypeCount();
+        String path = servletContext.getRealPath("/");
+        reportUtil.generatePieChart(path,data);
+        return "report";
     }
 
 }
