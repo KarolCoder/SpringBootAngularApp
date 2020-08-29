@@ -7,7 +7,6 @@ public class User  extends AbstactEntity {
 
     private String firstname;
     private String lastname;
-
     private String email;
     private String password;
 
@@ -41,5 +40,15 @@ public class User  extends AbstactEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

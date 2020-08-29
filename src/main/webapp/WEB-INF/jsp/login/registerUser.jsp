@@ -9,11 +9,12 @@
 <body>
     <form action="registerUser" method="post">
     <pre>
-      First Name:       <input type="text" name="firstName" />
-      Last Name:        <input type="text" name="lastName" />
+    <h2>User Registration</h2>
+      First Name:       <input type="text" name="firstname" />
+      Last Name:        <input type="text" name="lastname" />
       User Name:        <input type="text" name="email" />
-      Password          <input type="password" value="password" />
-      Confirm Password  <input type="password" value="confirmPassword" />
+      Password          <input type="password" name="password" />
+      Confirm Password  <input type="password" name="confirmPassword" />
       <input type="submit" value="register" />
     </pre>
     </form>
