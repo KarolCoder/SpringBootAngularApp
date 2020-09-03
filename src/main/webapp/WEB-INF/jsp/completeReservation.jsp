@@ -25,7 +25,7 @@ Email:      <input type = "text" name="passengerEmail"/>
 Phone:      <input type = "text" name="passengerPhone"/>
 
 <h2>Card Details</h2>
-Name on the card:       <input type = "text" name="nameONTheCard"/>
+Name on the card:       <input type = "text" name="nameOnTheCard"/>
 Card no:                <input type = "text" name="cardNumber"/>
 Expiry Date:            <input type = "text" name="expirationDate"/>
 Three Digit Sec Code:   <input type = "text" name="securityCode"/>

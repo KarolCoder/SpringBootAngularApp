@@ -63,4 +63,16 @@ public class Flight extends AbstactEntity {
     public void setEstimatedDepartureTime(LocalDateTime estimatedDepartureTime) {
         this.estimatedDepartureTime = estimatedDepartureTime;
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "flightNumber='" + flightNumber + '\'' +
+                ", operatingAirlines='" + operatingAirlines + '\'' +
+                ", departureCity='" + departureCity + '\'' +
+                ", arrivalCity='" + arrivalCity + '\'' +
+                ", dateOfDeparture=" + dateOfDeparture +
+                ", estimatedDepartureTime=" + estimatedDepartureTime +
+                '}';
+    }
 }

@@ -14,6 +14,15 @@ public class Reservation extends AbstactEntity{
     @OneToOne
     private Flight flight;
 
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Boolean getCheckedIn() {
         return checkedIn;
@@ -45,5 +54,16 @@ public class Reservation extends AbstactEntity{
 
     public void setFlight(Flight flight) {
         this.flight = flight;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+                "id=" + id +
+                ", checkedIn=" + checkedIn +
+                ", numberOfBags=" + numberOfBags +
+                ", passenger=" + passenger +
+                ", flight=" + flight +
+                '}';
     }
 }
