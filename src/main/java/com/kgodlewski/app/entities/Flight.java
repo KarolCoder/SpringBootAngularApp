@@ -1,9 +1,6 @@
 package com.kgodlewski.app.entities;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -65,5 +62,17 @@ public class Flight extends AbstactEntity {
 
     public void setEstimatedDepartureTime(LocalDateTime estimatedDepartureTime) {
         this.estimatedDepartureTime = estimatedDepartureTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "flightNumber='" + flightNumber + '\'' +
+                ", operatingAirlines='" + operatingAirlines + '\'' +
+                ", departureCity='" + departureCity + '\'' +
+                ", arrivalCity='" + arrivalCity + '\'' +
+                ", dateOfDeparture=" + dateOfDeparture +
+                ", estimatedDepartureTime=" + estimatedDepartureTime +
+                '}';
     }
 }
